@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>polindrome</title>
+
+    <script>
+        const kata1 = "Radar";
+        const kata2 = "Malam";
+        const kata3 = "Kasur ini rusak";
+        const kata4 = "Ibu Ratna antar ubi";
+        const kata5 = "Malas";
+        const kata6 = "Makan nasi goreang";
+        const kata7 = "Balonku ada lima";
+
+        function checkPolindrome(inp) {
+            const strArr = inp.toLowerCase().split('');
+            const newArr = strArr.join('');
+            const reverseArr = [...newArr].reverse().join('');
+
+            if (newArr === reverseArr) {
+                return "polindrome";
+            } else {
+                return "not polindrome";
+            }
+        }
+
+        console.log(checkPolindrome(kata1));
+        console.log(checkPolindrome(kata2));
+        console.log(checkPolindrome(kata3));
+        console.log(checkPolindrome(kata4));
+        console.log(checkPolindrome(kata5));
+        console.log(checkPolindrome(kata6));
+        console.log(checkPolindrome(kata7));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

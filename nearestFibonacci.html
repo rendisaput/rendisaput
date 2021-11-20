@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest Fibonacci</title>
+
+    <script>
+        function nearestFibonacci(no) {
+            if (no == 0) {
+                document.write(0);
+                return;
+            }
+            let satu = 0, dua = 1;
+            let tiga = satu + dua;
+
+            while (tiga <= no) {
+                satu = dua;
+                dua = tiga;
+                tiga = satu + dua;
+            }
+
+            let ans = (Math.abs(tiga - no) >= Math.abs(dua - no)) ? dua : tiga;
+            console.log(ans);
+        }
+        arr = 19;
+        nearestFibonacci(arr);
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
